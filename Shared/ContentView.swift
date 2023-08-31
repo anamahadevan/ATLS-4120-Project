@@ -7,15 +7,19 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text(" i am not code literate ")
+        
             .padding()
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
