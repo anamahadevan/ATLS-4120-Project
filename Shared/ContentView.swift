@@ -8,39 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var beExcited = false
-    @State private var text = "bmo"
-    @State private var image = Image("bmo");
+    @State private var beExcited = false;
+    @State private var text = "bmo";
     
     // function to make uppercase and append "!"
-    func makeChange(_ text: String) -> String {
+    func makeChange(_ input: String) -> String {
         
-        //when the toggle is on, beExcited = true
-        if(beExcited){
-        let _excitedtext = text.uppercased() + "!!!"
-        }
+        //when the toggle is on, beExcited = true + make uppercase
+        var _excitedtext = beExcited ? input.uppercased() : input;
+      
         //when toggle is off,  beExcited = false
-        else if(!beExcited){
-            return 0// return function
-        }
-        return excitedtext
+        if(!beExcited){
+            
+            }
+
+        return _excitedtext;
     }
     
     var body: some View {
         VStack {
-            image
-            .resizable()
-            .frame(width: 300, height: 400, alignment: .topLeading)
-            .border(Color.teal, width: 8)
-            
-            Text("\(makeChange(_:)(text))").padding().font(.system(size: 20, weight: .bold))
-                  
-            Toggle("get excited!", isOn : $beExcited)
-   
-            
-        }.padding()
+            Image("bmo")
+                .resizable()
+                .frame(width: 320, height: 420)
+                .border(Color.teal, width: 8)
+
+            Toggle("get excited!", isOn: $beExcited)
+
+            Text("\(makeChange(text))")
+                .padding(10)
+                .font(.system(size: 20, weight: .bold))
+        } .padding(10);
+
+
+        }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
