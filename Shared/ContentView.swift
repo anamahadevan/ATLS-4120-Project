@@ -7,36 +7,44 @@
 
 import SwiftUI
 
-
-struct ImageOverlay: View {
-    var body: some View {
-        ZStack {
-            Text("just a little guy")
-                .font(.callout)
-                .padding(6)
-                .foregroundColor(.white)
-        }.background(Color.black)
-        .opacity(0.8)
-        .cornerRadius(10.0)
-        .padding(6)
-    }
-}
-
 struct ContentView: View {
+    @State private var beExcited = false
+    @State private var text = "bmo"
+    @State private var image = Image("bmo");
+    
+    // function to make uppercase and append "!"
+    func makeChange(_ text: String) -> String {
+        
+        //when the toggle is on, beExcited = true
+        if(beExcited){
+        let _excitedtext = text.uppercased() + "!!!"
+        }
+        //when toggle is off,  beExcited = false
+        else if(!beExcited){
+            return 0// return function
+        }
+        return excitedtext
+    }
+    
     var body: some View {
         VStack {
-            Image("bmo")
-                .resizable()
-                .scaledToFit()
-                .overlay(ImageOverlay(), alignment: .bottomTrailing)
-            Spacer()
-        }
+            image
+            .resizable()
+            .frame(width: 300, height: 400, alignment: .topLeading)
+            .border(Color.teal, width: 8)
+            
+            Text("\(makeChange(_:)(text))").padding().font(.system(size: 20, weight: .bold))
+                  
+            Toggle("get excited!", isOn : $beExcited)
+   
+            
+        }.padding()
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
