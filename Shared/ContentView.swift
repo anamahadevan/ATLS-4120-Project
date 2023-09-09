@@ -15,7 +15,7 @@ struct ContentView: View {
     func makeChange(_ input: String) -> String {
         
         //when the toggle is on, beExcited = true + make uppercase
-        var _excitedtext = beExcited ? input.uppercased() : input;
+        var _excitedtext = beExcited ? (input.uppercased() + "!!!") : input;
       
         //when toggle is off,  beExcited = false
         if(!beExcited){
