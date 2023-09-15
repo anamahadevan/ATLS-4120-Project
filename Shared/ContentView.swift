@@ -46,6 +46,7 @@ struct IntroPageView: View{
        VStack {
 
         HStack {
+            //whatever number is here first is the center image
             ForEach (1..<2){ i in
             Image("Grid_\(i)")
             .resizable()
@@ -54,8 +55,8 @@ struct IntroPageView: View{
          }
            
            HStack {
-           ForEach (3..<4){ i in
-           Image("Grid\(i)")
+           ForEach (1..<4){ i in
+           Image("Grid_\(i)")
            .resizable()
            .aspectRatio(contentMode: .fill)                       }
                   }
