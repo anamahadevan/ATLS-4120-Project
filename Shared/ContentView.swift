@@ -2,14 +2,20 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by anabelle mahadevan on 8/28/23.
+//  Ana Mahadevan, Assignment #3 for Mobile App Development
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
+        TabView { // Navigation Menu !
+            
+            IntroPageView()
+                .tabItem{
+                    Label("home", systemImage: "globe")
+                }
+        
             Assignment2View()
                 .tabItem {
                     Label("#2", systemImage: "list.dash")
@@ -24,9 +30,12 @@ struct ContentView: View {
 }
     
 struct IntroPageView: View{
-    var body: some View {
-        Text ("Just checking!");
-    }
+  var body: some View {
+    NavigationView {
+        Text("Hello, World!")
+        .navigationTitle("Home")
+     }
+  }
 }
     
 struct Assignment2View: View{
