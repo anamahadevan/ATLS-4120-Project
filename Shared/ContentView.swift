@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     var body: some View {
@@ -30,17 +31,37 @@ struct ContentView: View {
 }
     
 struct IntroPageView: View{
+   // empty array for images
+    var images: [Image] = []
+    // controls width of columns
+    let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible())
+                  ]
+    
   var body: some View {
     NavigationView {
         Text("Hello, World!")
         .navigationTitle("Home")
+        
+        // for loop to iterate through image grid
+        ForEach (1..<4){ i in
+                    let gridImage: Image = Image("Grid\(i)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .aspectRatio(1, contentMode: .fit) as! Image
+                        images.append(gridImage)
+                    }
+        
+        
      }
   }
 }
     
 struct Assignment2View: View{
-    @State private var beExcited = false;
-    @State private var text = "bmo";
+    @State private var beExcited = false
+    var text = "bmo"
     
 // function to make uppercase and append "!"
     func makeChange(_ input: String) -> String {
@@ -66,8 +87,21 @@ struct Assignment2View: View{
     
 
 struct OtherPageView: View {
+    //create variable for when alert is on
+    @State private var showAlert = false
     var body: some View {
-        Text ("Just checking!");
+        
+        //when button is clicked show
+        Button("click here...") {
+               showAlert = true
+           }
+
+        .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("meep!"),
+                    message: Text("meep meep meep")
+                )
+            }
     }
 }
 
