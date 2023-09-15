@@ -40,22 +40,31 @@ struct IntroPageView: View{
             GridItem(.flexible())
                   ]
     
-  var body: some View {
-    NavigationView {
-        Text("Hello, World!")
-        .navigationTitle("Home")
-        
-        // for loop to iterate through image grid
-        ForEach (1..<4){ i in
-                    let gridImage: Image = Image("Grid\(i)")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .aspectRatio(1, contentMode: .fit) as! Image
-                        images.append(gridImage)
-                    }
-        
-        
-     }
+    var body: some View {
+       NavigationView {
+// for loop to
+       VStack {
+
+        HStack {
+            ForEach (1..<2){ i in
+            Image("Grid_\(i)")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            }
+         }
+           
+           HStack {
+           ForEach (3..<4){ i in
+           Image("Grid\(i)")
+           .resizable()
+           .aspectRatio(contentMode: .fill)                       }
+                  }
+           }
+    .navigationTitle("Home")
+
+
+
+    }
   }
 }
     
