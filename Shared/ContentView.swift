@@ -44,24 +44,29 @@ struct FruitView: View {
     }
     
     var body: some View {
-        NavigationView {
-            List(fruits) { fruit in
-                VStack(alignment: .leading) {
-                   Text("\(fruit.name)")
-                   Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
-                    Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
-                   
+        VStack{
+     
+            NavigationView {
+                List(fruits) { fruit in
+                    VStack(alignment: .leading) {
+                       Text("\(fruit.name)")
+                       Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
+                        Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
+                       
+                    }
+                }
+                .task {
+                    await getFruit()
                 }
             }
-            .task {
-                await getFruit()
-            }
+            // is this not working?
+            .navigationTitle("Fruits")
         }
-        .navigationTitle("Fruits")
+     
     }
 }
 
-struct FruitView2: PreviewProvider {
+struct prevewfruit: PreviewProvider {
     static var previews: some View {
         FruitView()
     }
