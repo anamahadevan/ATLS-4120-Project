@@ -19,7 +19,7 @@ struct ContentView: View {
             
             FruitView()
                 .tabItem{
-                    Label("Fruits", systemImage: "apple")
+                    Label("Fruits", systemImage: "gear")
                 }
             GalleryView()
                 .tabItem{
