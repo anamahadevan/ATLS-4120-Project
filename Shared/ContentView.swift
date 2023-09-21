@@ -48,8 +48,8 @@ struct FruitView: View {
             List(fruits) { fruit in
                 VStack(alignment: .leading) {
                    Text("\(fruit.name)")
-                   Text("Calories : \(fruit.nutritions.calories)")
-                    Text("Protein : \(fruit.nutritions.protein)")
+                   Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
+                    Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
                    
                 }
             }
