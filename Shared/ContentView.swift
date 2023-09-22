@@ -61,26 +61,58 @@ struct FruitView: View {
         }
     }
     
-    var body: some View {
-        
-            NavigationView {
-                List(fruits) { fruit in
-                    VStack(alignment: .leading) {
-                       Text("\(fruit.name)")
-                       Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
-                        Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
+    var body: some View{
+        NavigationView{
+            List{
+                ForEach(fruits){ fruit in
+                    NavigationLink{
+                        fruitSpecs(fruit: fruit)
+                    } label: {
+                        Text("\(fruit.name)")
                     }
-                    
-                }
-                .task {
-                    await getFruit()
                 }
             }
-            // is this not working?
-            .navigationTitle("Home")
-     
+        }
+        .navigationTitle("fruits")
+        .task {
+            await getFruit()
+        }
     }
 }
+
+//seperate view for when a fruit is selected
+struct fruitSpecs : View {
+    let fruit:Fruit
+
+    var body: some View {
+        VStack {
+            Text("\(fruit.name)")
+            
+            Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
+            
+            Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
+        }
+        //title is name of fruit u clicked on
+        .navigationTitle(fruit.name)
+    }
+}
+    
+    
+        
+//            NavigationView {
+//                List(fruits) { fruit in
+//                    VStack(alignment: .leading) {
+//                       Text("\(fruit.name)")
+//                       Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
+//                        Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
+//                    }
+//                }
+//                .task {
+//                    await getFruit()
+//                }
+//            }
+            
+//    }
 
 struct GalleryView: View{
    // empty array for images
