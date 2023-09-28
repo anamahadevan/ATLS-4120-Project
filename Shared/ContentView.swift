@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView { // Navigation Menu !
             
-            FrontPageView()
+            FruitView()
                 .tabItem {
                     Label("Home", systemImage: "square.and.pencil")
                 }
@@ -34,14 +34,63 @@ struct ContentView: View {
     }
 }
 
-struct FrontPageView: View {
-    //create variable for when alert is on
-    @State private var showAlert = false
-    var body: some View {
-        Text("Welcome ! ")
-    }
+
+// Struct for each fruit
+struct Fruit: Codable, Identifiable {
+    var id: Int
+    var name: String
+    var nutritions: Nutrition
+}
+struct Nutrition: Codable {
+    var calories: Double
+    var protein: Double
 }
 
+struct FruitView: View {
+    @State var fruits =  [Fruit]()
+    func getFruit() async {
+        do {
+            let url = URL(string: "https://www.fruityvice.com/api/fruit/all")!
+            let (data, _) = try await URLSession.shared.data(from: url)
+            print(data)
+            fruits = try JSONDecoder().decode([Fruit].self, from: data)
+        } catch {
+            print("Error: \(error.localizedDescription)")
+        }
+    }
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(fruits) { fruit in
+                    NavigationLink {
+                        FruitSpecs(fruit: fruit)
+                    } label: {
+                        Text("\(fruit.name)")
+                    }
+                }
+            }
+            .navigationTitle("fruits")
+            .task {
+                await getFruit()
+            }
+        }
+    }
+}
+                          
+// Separate view for when a fruit is selected
+struct FruitSpecs: View {
+    let fruit: Fruit
+    var body: some View {
+        VStack {
+            Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
+            Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
+            Link("your fruit cat",
+                 destination: URL(string: "https://www.pinterest.com/search/pins/?q=\(fruit.name)%20cat")!)
+//https://www.pinterest.com/search/pins/?q=pomegranate%20cat&rs=typed
+        }
+        .navigationTitle(fruit.name)
+    }
+}
     
 struct GalleryView: View{
 
