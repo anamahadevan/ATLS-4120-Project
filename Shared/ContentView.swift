@@ -39,6 +39,9 @@ struct ContentView: View {
 struct Fruit: Codable, Identifiable {
     var id: Int
     var name: String
+    var family: String
+    var order: String
+    var genus: String
     var nutritions: Nutrition
 }
 struct Nutrition: Codable {
@@ -82,12 +85,22 @@ struct FruitSpecs: View {
     let fruit: Fruit
     var body: some View {
         VStack {
+            
+            //blah blah
+            Text(fruit.family)
+            Text(fruit.genus)
+            Text(fruit.order)
+            
+            //nutritionals
+            Text("**Nutrition:**")
             Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
             Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
             Link("your fruit cat",
                  destination: URL(string: "https://www.pinterest.com/search/pins/?q=\(fruit.name)%20cat")!)
-//https://www.pinterest.com/search/pins/?q=pomegranate%20cat&rs=typed
-        }
+            //make cutie
+            .foregroundColor(Color.white)
+            .background(Color.blue)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationTitle(fruit.name)
     }
 }
