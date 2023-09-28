@@ -12,19 +12,19 @@ struct ContentView: View {
     var body: some View {
         TabView { // Navigation Menu !
             
-            OtherPageView()
+            FrontPageView()
                 .tabItem {
-                    Label("Order", systemImage: "square.and.pencil")
+                    Label("Home", systemImage: "square.and.pencil")
                 }
             
-            IntroPageView()
+            GalleryView()
                 .tabItem{
-                    Label("home", systemImage: "globe")
+                    Label("Gallery", systemImage: "globe")
                 }
         
             Assignment2View()
                 .tabItem {
-                    Label("#2", systemImage: "list.dash")
+                    Label("Wow", systemImage: "list.dash")
                 }
 
             
@@ -34,27 +34,16 @@ struct ContentView: View {
     }
 }
 
-struct OtherPageView: View {
+struct FrontPageView: View {
     //create variable for when alert is on
     @State private var showAlert = false
     var body: some View {
-        
-        //when button is clicked show
-        Button("click here...") {
-               showAlert = true
-           }
-
-        .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("meep!"),
-                    message: Text("meep meep meep")
-                )
-            }
+        Text("Welcome ! ")
     }
 }
 
     
-struct IntroPageView: View{
+struct GalleryView: View{
 
     var body: some View {
         NavigationView {
@@ -79,7 +68,7 @@ struct IntroPageView: View{
                     }
                 }
             }
-            .navigationTitle("Home")
+            .navigationTitle("Gallery")
 
         }
     }
