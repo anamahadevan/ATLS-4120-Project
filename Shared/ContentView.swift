@@ -1,171 +1,58 @@
 //
 //  ContentView.swift
-//  Shared
+//  JournalApp
 //
-//  Ana Mahadevan, Assignment #3 for Mobile App Development
+//  Created by anabelle mahadevan on 10/5/23.
 //
 
 import SwiftUI
-import UIKit
 
 struct ContentView: View {
-    var body: some View {
-        TabView { // Navigation Menu !
-            
-            FruitView()
-                .tabItem {
-                    Label("Home", systemImage: "square.and.pencil")
-                }
-            
-            GalleryView()
-                .tabItem{
-                    Label("Gallery", systemImage: "globe")
-                }
-        
-            Assignment2View()
-                .tabItem {
-                    Label("Wow", systemImage: "list.dash")
-                }
-
-            
-            
-                .background(Color.white)
-        }
-    }
-}
-
-
-// Struct for each fruit
-struct Fruit: Codable, Identifiable {
-    var id: Int
-    var name: String
-    var family: String
-    var order: String
-    var genus: String
-    var nutritions: Nutrition
-}
-struct Nutrition: Codable {
-    var calories: Double
-    var protein: Double
-}
-
-struct FruitView: View {
-    @State var fruits =  [Fruit]()
-    func getFruit() async {
-        do {
-            let url = URL(string: "https://www.fruityvice.com/api/fruit/all")!
-            let (data, _) = try await URLSession.shared.data(from: url)
-            print(data)
-            fruits = try JSONDecoder().decode([Fruit].self, from: data)
-        } catch {
-            print("Error: \(error.localizedDescription)")
-        }
-    }
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(fruits) { fruit in
-                    NavigationLink {
-                        FruitSpecs(fruit: fruit)
-                    } label: {
-                        Text("\(fruit.name)")
-                    }
-                }
-            }
-            .navigationTitle("fruits")
-            .task {
-                await getFruit()
-            }
-        }
-    }
-}
-                          
-// Separate view for when a fruit is selected
-struct FruitSpecs: View {
-    let fruit: Fruit
-    var body: some View {
-        VStack {
-            
-            //blah blah
-            Text(fruit.family)
-            Text(fruit.genus)
-            Text(fruit.order)
-            
-            //nutritionals
-            Text("**Nutrition:**")
-            Text("Calories : \(fruit.nutritions.calories, specifier: "%.2f")")
-            Text("Protein: \(fruit.nutritions.protein, specifier: "%.2f")")
-            Link("your fruit cat",
-                 destination: URL(string: "https://www.pinterest.com/search/pins/?q=\(fruit.name)%20cat")!)
-            //make cutie
-            .foregroundColor(Color.white)
-            .background(Color.blue)
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationTitle(fruit.name)
-    }
-}
+    @State private var entryText = " Click here to type"
+    @State private var noteName = " "
+    // creating the view model
+    @ObservedObject var viewModel = ContentViewModel()
     
-struct GalleryView: View{
-
     var body: some View {
-        NavigationView {
-            ScrollView {
-                // for loop to
-                VStack {
-                    
-                    HStack {
-                        //whatever number is here first is the center image
-                        ForEach (1..<2){ i in
-                            Image("Grid_\(i)")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        }
-                    }
-                    
-                    HStack {
-                        ForEach (1..<4){ i in
-                            Image("Grid_\(i)")
-                                .resizable()
-                            .aspectRatio(contentMode: .fill)                       }
-                    }
+        NavigationView{
+            // user controls
+            VStack{
+                //text field for title, where is this showing up?
+                TextField("Enter note name:",text:$noteName)
+                // lets note be edited
+                TextEditor(text:$entryText)
+                    .foregroundStyle(.secondary)
+                    .padding(.horizontal)
+                
+                //button for save
+                Button {
+                    viewModel.saveNotes(title: noteName, noteContent: entryText)
+                    entryText = " "
+                    noteName = " "
+                } label: {
+                    Text("Save Note")
                 }
-            }
-            .navigationTitle("Gallery")
+                //check if notes are being put in array
+//                Text("\(viewModel.myNotes.count)")
+                
+                //nav links
+                NavigationLink(" All Notes", destination: NotesListView(viewModel: viewModel))
 
+            } .navigationTitle("New Note") //title, need to put text field
+              .buttonStyle(.bordered)
+              .padding(.vertical)
         }
     }
 }
-    
-struct Assignment2View: View{
-    @State private var beExcited = false
-    var text = "bmo"
-    
-// function to make uppercase and append "!"
-    func makeChange(_ input: String) -> String {
-        //when the toggle is on, beExcited = true + make uppercase
-        return beExcited ? input.uppercased() : input
-    }
 
-    var body: some View {
-        VStack {
-            Image("bmo")
-                .resizable()
-                .frame(width: 320, height: 420)
-                .border(Color.teal, width: 8)
 
-            Toggle("get excited!", isOn: $beExcited)
-
-            Text("\(makeChange(text))")
-                .padding(10)
-                .font(.system(size: 20, weight: .bold))
-            } .padding(10);
-        }
-}
-    
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView()
+        }
     }
 }

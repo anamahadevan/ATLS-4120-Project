@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */; };
+		9180534D2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */; };
+		918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */; };
+		918053952AD08F3E00DD5FD2 /* NotesModel in Sources */ = {isa = PBXBuildFile; fileRef = 918053942AD08F3E00DD5FD2 /* NotesModel */; };
+		918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053962AD08F8900DD5FD2 /* NotesListView.swift */; };
 		918054B32A9D30C100806AF3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054B22A9D30C100806AF3 /* Tests_iOS.swift */; };
 		918054B52A9D30C100806AF3 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054B42A9D30C100806AF3 /* Tests_iOSLaunchTests.swift */; };
 		918054BF2A9D30C100806AF3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054BE2A9D30C100806AF3 /* Tests_macOS.swift */; };
 		918054C12A9D30C100806AF3 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054C02A9D30C100806AF3 /* Tests_macOSLaunchTests.swift */; };
-		918054C22A9D30C100806AF3 /* HelloWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549A2A9D30BE00806AF3 /* HelloWorldApp.swift */; };
-		918054C32A9D30C100806AF3 /* HelloWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549A2A9D30BE00806AF3 /* HelloWorldApp.swift */; };
 		918054C42A9D30C100806AF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549B2A9D30BE00806AF3 /* ContentView.swift */; };
 		918054C52A9D30C100806AF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549B2A9D30BE00806AF3 /* ContentView.swift */; };
 		918054C62A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
@@ -37,7 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9180549A2A9D30BE00806AF3 /* HelloWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldApp.swift; sourceTree = "<group>"; };
+		9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalApp.swift; sourceTree = "<group>"; };
+		918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		918053942AD08F3E00DD5FD2 /* NotesModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotesModel; sourceTree = "<group>"; };
+		918053962AD08F8900DD5FD2 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
 		9180549B2A9D30BE00806AF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9180549C2A9D30C100806AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918054A12A9D30C100806AF3 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		918053482ACDEEDA00DD5FD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9180534A2ACDEEEF00DD5FD2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		918053932AD08F2E00DD5FD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				918053942AD08F3E00DD5FD2 /* NotesModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		918054942A9D30BE00806AF3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +126,12 @@
 		918054992A9D30BE00806AF3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9180549A2A9D30BE00806AF3 /* HelloWorldApp.swift */,
+				9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */,
+				918053932AD08F2E00DD5FD2 /* Model */,
+				9180534A2ACDEEEF00DD5FD2 /* ViewModel */,
+				918053482ACDEEDA00DD5FD2 /* View */,
 				9180549B2A9D30BE00806AF3 /* ContentView.swift */,
+				918053962AD08F8900DD5FD2 /* NotesListView.swift */,
 				9180549C2A9D30C100806AF3 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -300,7 +333,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				918054C42A9D30C100806AF3 /* ContentView.swift in Sources */,
-				918054C22A9D30C100806AF3 /* HelloWorldApp.swift in Sources */,
+				918053952AD08F3E00DD5FD2 /* NotesModel in Sources */,
+				9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
+				918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */,
+				918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				918054C52A9D30C100806AF3 /* ContentView.swift in Sources */,
-				918054C32A9D30C100806AF3 /* HelloWorldApp.swift in Sources */,
+				9180534D2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

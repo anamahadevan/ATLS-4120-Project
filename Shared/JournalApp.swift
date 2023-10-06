@@ -1,14 +1,14 @@
 //
-//  HelloWorldApp.swift
-//  Shared
+//  JournalAppApp.swift
+//  JournalApp
 //
-//  Created by anabelle mahadevan on 8/28/23.
+//  Created by anabelle mahadevan on 10/5/23.
 //
 
 import SwiftUI
 
 @main
-struct HelloWorldApp: App {
+struct JournalAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
