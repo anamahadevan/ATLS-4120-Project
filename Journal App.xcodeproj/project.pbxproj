@@ -10,14 +10,13 @@
 		9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */; };
 		9180534D2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */; };
 		918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */; };
-		918053952AD08F3E00DD5FD2 /* NotesModel in Sources */ = {isa = PBXBuildFile; fileRef = 918053942AD08F3E00DD5FD2 /* NotesModel */; };
 		918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053962AD08F8900DD5FD2 /* NotesListView.swift */; };
+		918053992AD0B7FE00DD5FD2 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053982AD0B7FE00DD5FD2 /* NotesModel.swift */; };
 		918054B32A9D30C100806AF3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054B22A9D30C100806AF3 /* Tests_iOS.swift */; };
 		918054B52A9D30C100806AF3 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054B42A9D30C100806AF3 /* Tests_iOSLaunchTests.swift */; };
 		918054BF2A9D30C100806AF3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054BE2A9D30C100806AF3 /* Tests_macOS.swift */; };
 		918054C12A9D30C100806AF3 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054C02A9D30C100806AF3 /* Tests_macOSLaunchTests.swift */; };
 		918054C42A9D30C100806AF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549B2A9D30BE00806AF3 /* ContentView.swift */; };
-		918054C52A9D30C100806AF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549B2A9D30BE00806AF3 /* ContentView.swift */; };
 		918054C62A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
 		918054C72A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -42,12 +41,12 @@
 /* Begin PBXFileReference section */
 		9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalApp.swift; sourceTree = "<group>"; };
 		918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		918053942AD08F3E00DD5FD2 /* NotesModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotesModel; sourceTree = "<group>"; };
 		918053962AD08F8900DD5FD2 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
+		918053982AD0B7FE00DD5FD2 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		9180549B2A9D30BE00806AF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9180549C2A9D30C100806AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		918054A12A9D30C100806AF3 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		918054A72A9D30C100806AF3 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		918054A12A9D30C100806AF3 /* Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		918054A72A9D30C100806AF3 /* Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918054A92A9D30C100806AF3 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		918054AE2A9D30C100806AF3 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918054B22A9D30C100806AF3 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
@@ -92,6 +91,8 @@
 		918053482ACDEEDA00DD5FD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9180549B2A9D30BE00806AF3 /* ContentView.swift */,
+				918053962AD08F8900DD5FD2 /* NotesListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,7 +108,7 @@
 		918053932AD08F2E00DD5FD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				918053942AD08F3E00DD5FD2 /* NotesModel */,
+				918053982AD0B7FE00DD5FD2 /* NotesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,8 +131,6 @@
 				918053932AD08F2E00DD5FD2 /* Model */,
 				9180534A2ACDEEEF00DD5FD2 /* ViewModel */,
 				918053482ACDEEDA00DD5FD2 /* View */,
-				9180549B2A9D30BE00806AF3 /* ContentView.swift */,
-				918053962AD08F8900DD5FD2 /* NotesListView.swift */,
 				9180549C2A9D30C100806AF3 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -140,8 +139,8 @@
 		918054A22A9D30C100806AF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				918054A12A9D30C100806AF3 /* HelloWorld.app */,
-				918054A72A9D30C100806AF3 /* HelloWorld.app */,
+				918054A12A9D30C100806AF3 /* Journal App.app */,
+				918054A72A9D30C100806AF3 /* Journal App.app */,
 				918054AE2A9D30C100806AF3 /* Tests iOS.xctest */,
 				918054BA2A9D30C100806AF3 /* Tests macOS.xctest */,
 			);
@@ -177,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		918054A02A9D30C100806AF3 /* HelloWorld (iOS) */ = {
+		918054A02A9D30C100806AF3 /* Journal App (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 918054CA2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "HelloWorld (iOS)" */;
+			buildConfigurationList = 918054CA2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "Journal App (iOS)" */;
 			buildPhases = (
 				9180549D2A9D30C100806AF3 /* Sources */,
 				9180549E2A9D30C100806AF3 /* Frameworks */,
@@ -189,14 +188,14 @@
 			);
 			dependencies = (
 			);
-			name = "HelloWorld (iOS)";
+			name = "Journal App (iOS)";
 			productName = "HelloWorld (iOS)";
-			productReference = 918054A12A9D30C100806AF3 /* HelloWorld.app */;
+			productReference = 918054A12A9D30C100806AF3 /* Journal App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		918054A62A9D30C100806AF3 /* HelloWorld (macOS) */ = {
+		918054A62A9D30C100806AF3 /* Journal App (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 918054CD2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "HelloWorld (macOS)" */;
+			buildConfigurationList = 918054CD2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "Journal App (macOS)" */;
 			buildPhases = (
 				918054A32A9D30C100806AF3 /* Sources */,
 				918054A42A9D30C100806AF3 /* Frameworks */,
@@ -206,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = "HelloWorld (macOS)";
+			name = "Journal App (macOS)";
 			productName = "HelloWorld (macOS)";
-			productReference = 918054A72A9D30C100806AF3 /* HelloWorld.app */;
+			productReference = 918054A72A9D30C100806AF3 /* Journal App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		918054AD2A9D30C100806AF3 /* Tests iOS */ = {
@@ -273,7 +272,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 918054982A9D30BE00806AF3 /* Build configuration list for PBXProject "HelloWorld" */;
+			buildConfigurationList = 918054982A9D30BE00806AF3 /* Build configuration list for PBXProject "Journal App" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,8 +285,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				918054A02A9D30C100806AF3 /* HelloWorld (iOS) */,
-				918054A62A9D30C100806AF3 /* HelloWorld (macOS) */,
+				918054A02A9D30C100806AF3 /* Journal App (iOS) */,
+				918054A62A9D30C100806AF3 /* Journal App (macOS) */,
 				918054AD2A9D30C100806AF3 /* Tests iOS */,
 				918054B92A9D30C100806AF3 /* Tests macOS */,
 			);
@@ -333,10 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				918054C42A9D30C100806AF3 /* ContentView.swift in Sources */,
-				918053952AD08F3E00DD5FD2 /* NotesModel in Sources */,
 				9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
 				918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */,
 				918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */,
+				918053992AD0B7FE00DD5FD2 /* NotesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918054C52A9D30C100806AF3 /* ContentView.swift in Sources */,
 				9180534D2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,12 +370,12 @@
 /* Begin PBXTargetDependency section */
 		918054B02A9D30C100806AF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 918054A02A9D30C100806AF3 /* HelloWorld (iOS) */;
+			target = 918054A02A9D30C100806AF3 /* Journal App (iOS) */;
 			targetProxy = 918054AF2A9D30C100806AF3 /* PBXContainerItemProxy */;
 		};
 		918054BC2A9D30C100806AF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 918054A62A9D30C100806AF3 /* HelloWorld (macOS) */;
+			target = 918054A62A9D30C100806AF3 /* Journal App (macOS) */;
 			targetProxy = 918054BB2A9D30C100806AF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -514,7 +512,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cuboulder.HelloWorld;
-				PRODUCT_NAME = HelloWorld;
+				PRODUCT_NAME = "Journal App";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -544,7 +542,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cuboulder.HelloWorld;
-				PRODUCT_NAME = HelloWorld;
+				PRODUCT_NAME = "Journal App";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -574,7 +572,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cuboulder.HelloWorld;
-				PRODUCT_NAME = HelloWorld;
+				PRODUCT_NAME = "Journal App";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -602,7 +600,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cuboulder.HelloWorld;
-				PRODUCT_NAME = HelloWorld;
+				PRODUCT_NAME = "Journal App";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -691,7 +689,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		918054982A9D30BE00806AF3 /* Build configuration list for PBXProject "HelloWorld" */ = {
+		918054982A9D30BE00806AF3 /* Build configuration list for PBXProject "Journal App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918054C82A9D30C100806AF3 /* Debug */,
@@ -700,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		918054CA2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "HelloWorld (iOS)" */ = {
+		918054CA2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "Journal App (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918054CB2A9D30C100806AF3 /* Debug */,
@@ -709,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		918054CD2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "HelloWorld (macOS)" */ = {
+		918054CD2A9D30C100806AF3 /* Build configuration list for PBXNativeTarget "Journal App (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918054CE2A9D30C100806AF3 /* Debug */,
