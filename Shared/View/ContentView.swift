@@ -37,6 +37,7 @@ struct ContentView: View {
                 
                 //nav links
                 NavigationLink(" All Notes", destination: NotesListView(viewModel: viewModel))
+//                NavigationLink(" Note Location", destination: MapView()
 
             } .navigationTitle("New Note") //title, need to put text field
               .buttonStyle(.bordered)
@@ -51,7 +52,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
             ContentView()
         }
     }
