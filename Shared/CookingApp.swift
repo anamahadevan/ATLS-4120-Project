@@ -1,6 +1,6 @@
 //
-//  JournalAppApp.swift
-//  JournalApp
+//  CookingApp.swift
+//
 //
 //  Created by anabelle mahadevan on 10/5/23.
 //

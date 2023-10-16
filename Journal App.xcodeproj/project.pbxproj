@@ -7,20 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */; };
-		9180534D2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */; };
-		918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */; };
-		918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053962AD08F8900DD5FD2 /* NotesListView.swift */; };
-		918053992AD0B7FE00DD5FD2 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918053982AD0B7FE00DD5FD2 /* NotesModel.swift */; };
-		9180539B2AD721BD00DD5FD2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180539A2AD721BD00DD5FD2 /* MapView.swift */; };
+		910D38592AE589E20078E717 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910D38582AE589E20078E717 /* ContentView.swift */; };
+		9180534C2ACF4F7A00DD5FD2 /* CookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* CookingApp.swift */; };
+		9180534D2ACF4F7A00DD5FD2 /* CookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180534B2ACF4F7A00DD5FD2 /* CookingApp.swift */; };
 		918054B32A9D30C100806AF3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054B22A9D30C100806AF3 /* Tests_iOS.swift */; };
 		918054B52A9D30C100806AF3 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054B42A9D30C100806AF3 /* Tests_iOSLaunchTests.swift */; };
 		918054BF2A9D30C100806AF3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054BE2A9D30C100806AF3 /* Tests_macOS.swift */; };
 		918054C12A9D30C100806AF3 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918054C02A9D30C100806AF3 /* Tests_macOSLaunchTests.swift */; };
-		918054C42A9D30C100806AF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549B2A9D30BE00806AF3 /* ContentView.swift */; };
 		918054C62A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
 		918054C72A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
-		918B4A252ADD8B6300733529 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B4A242ADD8B6300733529 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalApp.swift; sourceTree = "<group>"; };
-		918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		918053962AD08F8900DD5FD2 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
-		918053982AD0B7FE00DD5FD2 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
-		9180539A2AD721BD00DD5FD2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		9180549B2A9D30BE00806AF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		910D38582AE589E20078E717 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9180534B2ACF4F7A00DD5FD2 /* CookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingApp.swift; sourceTree = "<group>"; };
 		9180549C2A9D30C100806AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918054A12A9D30C100806AF3 /* Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918054A72A9D30C100806AF3 /* Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +48,6 @@
 		918054BA2A9D30C100806AF3 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918054BE2A9D30C100806AF3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		918054C02A9D30C100806AF3 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		918B4A242ADD8B6300733529 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,30 +82,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		918053482ACDEEDA00DD5FD2 /* View */ = {
+		918053932AD08F2E00DD5FD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9180549B2A9D30BE00806AF3 /* ContentView.swift */,
-				9180539A2AD721BD00DD5FD2 /* MapView.swift */,
-				918053962AD08F8900DD5FD2 /* NotesListView.swift */,
+				910D38582AE589E20078E717 /* ContentView.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9180534A2ACDEEEF00DD5FD2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				918053912AD08F0A00DD5FD2 /* ContentViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		918053932AD08F2E00DD5FD2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				918053982AD0B7FE00DD5FD2 /* NotesModel.swift */,
-			);
-			path = Model;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		918054942A9D30BE00806AF3 = {
@@ -132,11 +104,8 @@
 		918054992A9D30BE00806AF3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				918B4A232ADD8B4600733529 /* Services */,
-				9180534B2ACF4F7A00DD5FD2 /* JournalApp.swift */,
-				918053932AD08F2E00DD5FD2 /* Model */,
-				9180534A2ACDEEEF00DD5FD2 /* ViewModel */,
-				918053482ACDEEDA00DD5FD2 /* View */,
+				9180534B2ACF4F7A00DD5FD2 /* CookingApp.swift */,
+				918053932AD08F2E00DD5FD2 /* Views */,
 				9180549C2A9D30C100806AF3 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -177,14 +146,6 @@
 				918054C02A9D30C100806AF3 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
-		918B4A232ADD8B4600733529 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				918B4A242ADD8B6300733529 /* File.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +229,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					918054A02A9D30C100806AF3 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -345,13 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918054C42A9D30C100806AF3 /* ContentView.swift in Sources */,
-				9180539B2AD721BD00DD5FD2 /* MapView.swift in Sources */,
-				918B4A252ADD8B6300733529 /* File.swift in Sources */,
-				9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
-				918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */,
-				918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */,
-				918053992AD0B7FE00DD5FD2 /* NotesModel.swift in Sources */,
+				910D38592AE589E20078E717 /* ContentView.swift in Sources */,
+				9180534C2ACF4F7A00DD5FD2 /* CookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9180534D2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
+				9180534D2ACF4F7A00DD5FD2 /* CookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +386,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -488,9 +446,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -576,6 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4M3MH66LUS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -604,6 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4M3MH66LUS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -670,6 +632,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4M3MH66LUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -689,6 +652,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4M3MH66LUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
