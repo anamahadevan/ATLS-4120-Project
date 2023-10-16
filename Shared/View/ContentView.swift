@@ -35,13 +35,17 @@ struct ContentView: View {
                 //check if notes are being put in array
 //                Text("\(viewModel.myNotes.count)")
                 
-                //nav links
                 NavigationLink(" All Notes", destination: NotesListView(viewModel: viewModel))
-//                NavigationLink(" Note Location", destination: MapView()
-
+              
+                ZStack{
+                    //nav links
+                    NavigationLink(" Note Location", destination: MapView())
+                }
             } .navigationTitle("New Note") //title, need to put text field
               .buttonStyle(.bordered)
               .padding(.vertical)
+            
+        
         }
     }
 }

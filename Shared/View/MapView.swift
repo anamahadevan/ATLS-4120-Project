@@ -8,15 +8,20 @@
 import SwiftUI
 import MapKit
 
-struct ContentView: View {
+struct MapView: View {
+    @State private var region = MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: 40.0077,longitude: 105.2700),
+        span:MKCoordinateSpan(latitudeDelta:0.01,
+                              longitudeDelta: 0.01)
+        )
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Map(coordinateRegion: $region)
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
-//struct ContentView: View { @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.4300, longitude: -122.1700), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02) )
 
-//var body: some View { VStack { Map(coordinateRegion: $region) .edgesIgnoringSafeArea(.all) } } } struct ContentView_Previews: PreviewProvider { static var previews: some View { ContentView() } }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
