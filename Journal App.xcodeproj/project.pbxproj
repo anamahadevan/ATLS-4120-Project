@@ -20,7 +20,7 @@
 		918054C42A9D30C100806AF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180549B2A9D30BE00806AF3 /* ContentView.swift */; };
 		918054C62A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
 		918054C72A9D30C100806AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9180549C2A9D30C100806AF3 /* Assets.xcassets */; };
-		918B4A252ADD8B6300733529 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B4A242ADD8B6300733529 /* File.swift */; };
+		918B4A252ADD8B6300733529 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B4A242ADD8B6300733529 /* PushNotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		918054BA2A9D30C100806AF3 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918054BE2A9D30C100806AF3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		918054C02A9D30C100806AF3 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		918B4A242ADD8B6300733529 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		918B4A242ADD8B6300733529 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +182,7 @@
 		918B4A232ADD8B4600733529 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				918B4A242ADD8B6300733529 /* File.swift */,
+				918B4A242ADD8B6300733529 /* PushNotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 			files = (
 				918054C42A9D30C100806AF3 /* ContentView.swift in Sources */,
 				9180539B2AD721BD00DD5FD2 /* MapView.swift in Sources */,
-				918B4A252ADD8B6300733529 /* File.swift in Sources */,
+				918B4A252ADD8B6300733529 /* PushNotificationService.swift in Sources */,
 				9180534C2ACF4F7A00DD5FD2 /* JournalApp.swift in Sources */,
 				918053972AD08F8900DD5FD2 /* NotesListView.swift in Sources */,
 				918053922AD08F0A00DD5FD2 /* ContentViewModel.swift in Sources */,
