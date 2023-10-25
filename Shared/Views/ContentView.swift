@@ -107,32 +107,6 @@ struct CardView: View{
         
         
         VStack {
-            
-            /////////// tags /////////
-            HStack{
-                HStack(alignment: .center, spacing: 10) {  Text("bmo") }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .background(Color(red: 0.98, green: 0.64, blue: 0.62))
-
-                .cornerRadius(10)
-                .shadow(color: Color(red: 0.18, green: 0.15, blue: 0.14).opacity(0.15), radius: 10, x: 0, y: 0)
-
-                
-                HStack(alignment: .center, spacing: 10) { Text("was") }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .background(Color(red: 0.87, green: 0.78, blue: 0.75))
-                .cornerRadius(10)
-                .shadow(color: Color(red: 0.18, green: 0.15, blue: 0.14).opacity(0.15), radius: 10, x: 0, y: 0)
-                
-                HStack(alignment: .center, spacing: 10) { Text("my cat") }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .background(Color(red: 0.87, green: 0.78, blue: 0.75))
-                .cornerRadius(10)
-                .shadow(color: Color(red: 0.18, green: 0.15, blue: 0.14).opacity(0.15), radius: 10, x: 0, y: 0)
-            }
 
          ////// post //////
             ZStack{
@@ -149,6 +123,8 @@ struct CardView: View{
                 .frame(width: 353, height: 564)
                 .clipped()
                 
+                
+                
                 // i know the tags are supposed to go here but they are not showing up right now
            
                 
@@ -161,6 +137,32 @@ struct CardView: View{
                     .background(Color("Sand").opacity(0.8))
 
                     .cornerRadius(10)
+                
+                /////////// tags /////////
+                HStack{
+                    HStack(alignment: .center, spacing: 10) {  Text("bmo") }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color(red: 0.98, green: 0.64, blue: 0.62))
+
+                    .cornerRadius(10)
+                    .shadow(color: Color(red: 0.18, green: 0.15, blue: 0.14).opacity(0.15), radius: 10, x: 0, y: 0)
+
+                    
+                    HStack(alignment: .center, spacing: 10) { Text("was") }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color(red: 0.87, green: 0.78, blue: 0.75))
+                    .cornerRadius(10)
+                    .shadow(color: Color(red: 0.18, green: 0.15, blue: 0.14).opacity(0.15), radius: 10, x: 0, y: 0)
+                    
+                    HStack(alignment: .center, spacing: 10) { Text("my cat") }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color(red: 0.87, green: 0.78, blue: 0.75))
+                    .cornerRadius(10)
+                    .shadow(color: Color(red: 0.18, green: 0.15, blue: 0.14).opacity(0.15), radius: 10, x: 0, y: 0)
+                }
                 
           
                 HStack (alignment: .top){
@@ -195,8 +197,6 @@ struct CardView: View{
                     textExpand(" I really want this to work because I spent a really long time trying to figure it out but honestly it might be time to throw in the towel", lineLimit: 2)
                     
                 }
-                    
-              
                     
                                 
             } .background(Color("Sand"))
